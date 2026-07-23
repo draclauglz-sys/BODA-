@@ -1,0 +1,1 @@
+const t=new Date('2026-11-06T19:00:00-05:00').getTime();setInterval(()=>{let x=t-Date.now();if(x<0){msg.textContent='¡Hoy es el gran día!';x=0}let d=Math.floor(x/86400000),h=Math.floor(x%86400000/3600000),m=Math.floor(x%3600000/60000),s=Math.floor(x%60000/1000);['d','h','m','s'].forEach((id,i)=>document.getElementById(id).textContent=[d,h,m,s][i]);},1000);
