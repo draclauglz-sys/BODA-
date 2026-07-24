@@ -3,7 +3,7 @@ const t=new Date('2026-11-06T19:00:00-05:00').getTime();setInterval(()=>{let x=t
 const music=document.getElementById('bgMusic');
 const btn=document.getElementById('musicBtn');
 let playing=false;
-async function startMusic(){if(playing)return;try{await music.play();playing=true;btn.textContent='❚❚';btn.classList.add('playing');}catch(e){}}
-btn.onclick=(e)=>{e.stopPropagation();if(!playing){startMusic();}else{music.pause();playing=false;btn.textContent='♪';btn.classList.remove('playing');}};
+async function startMusic(){if(playing)return;try{await music.play();playing=true;btn.textContent='⏸';btn.classList.add('playing');}catch(e){}}
+btn.onclick=(e)=>{e.stopPropagation();if(!playing){startMusic();}else{music.pause();playing=false;btn.textContent='▶';btn.classList.remove('playing');}};
 document.addEventListener('click',startMusic,{once:true});
 document.addEventListener('touchstart',startMusic,{once:true});
