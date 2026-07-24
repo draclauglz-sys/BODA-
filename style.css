@@ -1,1 +1,5 @@
+html{background:transparent}
 body{margin:0;background:transparent;font-family:Georgia,serif;color:#d8c19b;display:flex;justify-content:center;align-items:center;height:100vh}.c{text-align:center}h2{font-style:italic;font-weight:400}#cd{display:flex;gap:22px;justify-content:center}span{display:block;font-size:52px}small{font-size:14px;text-transform:uppercase}p{font-style:italic}
+.music-btn{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;border:1px solid rgba(216,193,155,.7);background:transparent;color:#d8c19b;font-size:22px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.music-btn.playing{animation:spin 6s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
