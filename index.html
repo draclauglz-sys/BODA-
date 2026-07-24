@@ -4,100 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cuenta Regresiva</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Fondo transparente forzado (por si style.css define un fondo) */
-    html, body {
-      background: transparent !important;
-    }
-
-    /* Botón de reproducir canción — solo símbolo de play/pausa */
-    .btn-cancion {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 24px auto 0 auto;
-      background: linear-gradient(135deg, #d4a5a5, #8b6f47);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-      font-family: inherit;
-    }
-
-    .btn-cancion:hover {
-      transform: scale(1.08);
-    }
-  </style>
 </head>
 <body>
+
   <div class="countdown-wrapper">
+
     <div class="ornament">
       <span></span>
       <div class="diamond"></div>
       <span></span>
     </div>
+
     <h1 class="title">Cuenta Regresiva</h1>
+
     <div class="countdown">
+
       <div class="time-block">
         <div id="days" class="number">000</div>
         <div class="label">Días</div>
       </div>
+
       <div class="time-block">
         <div id="hours" class="number">00</div>
         <div class="label">Horas</div>
       </div>
+
       <div class="time-block">
         <div id="minutes" class="number">00</div>
         <div class="label">Minutos</div>
       </div>
+
       <div class="time-block">
         <div id="seconds" class="number">00</div>
         <div class="label">Segundos</div>
       </div>
+
     </div>
+
     <div class="ornament bottom">
       <span></span>
       <div class="diamond"></div>
       <span></span>
     </div>
+
     <p id="message" class="message">
       Cada instante nos acerca al comienzo de nuestra nueva historia.
     </p>
 
-    <button id="btnCancion" class="btn-cancion">▶</button>
-    <audio id="audioCancion" src="cancion.mp3" preload="none"></audio>
   </div>
 
   <script src="script.js"></script>
-  <script>
-    const btn = document.getElementById('btnCancion');
-    const audio = document.getElementById('audioCancion');
-    let sonando = false;
-
-    btn.addEventListener('click', () => {
-      if (!sonando) {
-        audio.play();
-        btn.textContent = '⏸';
-      } else {
-        audio.pause();
-        btn.textContent = '▶';
-      }
-      sonando = !sonando;
-    });
-
-    audio.addEventListener('ended', () => {
-      btn.textContent = '▶';
-      sonando = false;
-    });
-  </script>
 </body>
 </html>
+2. style.css
